@@ -1,0 +1,26 @@
+<li class="box-selected-opt" style="list-style: none; text-align:-webkit-match-parent;display:none;"> <!--  주문페이지 작은 틀  -->
+									<!-- 사이즈 출력 div -->
+									<div class="opt"> 
+									<span id="spanSize"> Size : </span><span id="spanColor"> Color : </span>
+									</div>
+									<!-- 사이즈 출력 div -->
+										<!-- 수량 체크 div --> <!-- toggle사용해서 숨긴상태로 사용 입력 -->
+										<div class="product_quantity_container">
+											<div class="product_quantity clearfix">
+												<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+												<div class="quantity_buttons">
+													<div id="up_quantity"class="quantity_inc quantity_control">
+														<i class="fa fa-caret-up" aria-hidden="true"></i>
+													</div>
+													<div id="down_quantity" class="quantity_dec quantity_control">
+														<i class="fa fa-caret-down" aria-hidden="true"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- 수량 체크 div -->
+									<!-- 가격 출력 div -->
+									<div id="priceDiv" style="display:none;">
+									</div>
+									<!-- 가격 출력 div -->
+								</li>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.shop.mapper.ProductMapper">
+
+	<select id="read" resultType="ProductVO">
+		select * from product where pnum = 
+		#{pnum}
+	</select>
+	
+	<select id="readInfo" resultType="com.shop.domain.ProductSizeVO">
+	<![CDATA[ select * from product_info where pnum=#{pnum}]]>
+	</select>
+	
+	<select id="listAll" resultType="com.shop.domain.ProductVO">
+
+<![CDATA[ select pnum,pname,to_char(pprice,'999,999') pprice,pimg,pcontent,puse,pdiscount,pstar from product]]>
+<!--  where pseq > 0 order by pseq desc -->
+	</select>
+	
+	<select id="ajaxselectcolor" resultType="com.shop.domain.ProductSizeVO">
+	<![CDATA[ select * from product_info where pnum=#{pnum} and psize=#{productSize}]]>
+	</select>
+
+</mapper>
